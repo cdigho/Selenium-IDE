@@ -1,0 +1,91 @@
+{
+  "id": "f3c89a19-3fd2-45c2-b23a-82d40b4569d9",
+  "version": "2.0",
+  "name": "克什克腾旗人民医院微信商户",
+  "url": "https://pay.weixin.qq.com/index.php/extend/product/lists?tid=3",
+  "tests": [{
+    "id": "d1206e2f-7f20-4f7c-9fe1-5a38ba508949",
+    "name": "切换菜单保持活跃",
+    "commands": [{
+      "id": "c9e6f29c-fa23-429b-aaec-e9e992cf3e39",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "60dbc717-0110-4b7c-8237-7ee256a47eaf",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cc14166-d4f2-4114-9933-f2db08a68169",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${index}+1",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "446622c6-c4f1-4722-aaf9-ebb1c3409598",
+      "comment": "",
+      "command": "open",
+      "target": "https://pay.weixin.qq.com/index.php/extend/product/lists?tid=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c467399-922b-4c19-8320-e7adc32786e8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9da09a2a-d597-4fb7-8274-6bfd843325da",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=账户中心",
+      "targets": [
+        ["linkText=账户中心", "linkText"],
+        ["css=.nav li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'账户中心')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/index.php/core/home/header?menu=21500')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'账户中心')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8f39bf7-cd74-43cd-a3a8-9f5cb91e6f59",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=交易中心",
+      "targets": [
+        ["linkText=交易中心", "linkText"],
+        ["css=.nav li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'交易中心')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/index.php/core/home/header?menu=14103')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'交易中心')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "871397a9-a6ec-461d-8ec8-ab11d3f5da0c",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${index}>0",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4a4da607-aefb-4dd7-a27d-c7d6f008f1cc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d1206e2f-7f20-4f7c-9fe1-5a38ba508949"]
+  }],
+  "urls": ["https://pay.weixin.qq.com/index.php/extend/product/lists?tid=3"],
+  "plugins": []
+}
